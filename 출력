@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double RATE = 10;
+	double deposit;
+
+	cout << "금년도 예산을 입력하세요.\n";
+	cin >> deposit;
+
+	double newBalance;
+	newBalance = deposit + deposit * (RATE / 100);
+
+	cout << "내년도 당신의 활용 가능한 예산은 " << newBalance << "입니다.";
+
+	return 0;
+}
