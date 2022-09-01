@@ -13,6 +13,5 @@ int main()
 	newBalance = deposit + deposit * (RATE / 100);
 
 	cout << "내년도 당신의 활용 가능한 예산은 " << newBalance << "입니다.";
-
 	return 0;
 }
