@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+struct Account {
+	double balance;
+	double interestRate;
+	int term;
+};
+
+void getData(Account& theAccount);
+
+int main() {
+	Account myAccount;
+	getData(myAccount);
+
+	double rate, interest;
+	rate = myAccount.interestRate / 100;
+	interest = myAccount.balance * (rate * (myAccount.term / 12));
+	myAccount.balance = myAccount.balance + interest;
+
+	cout << "Your final balance is " << myAccount.balance << endl;
+	return 0;
+}
+
+void getData(Account& theAccount) {
+	cout << "Enter your balance: $";
+	cin >> theAccount.balance;
+	cout << "Enter the  interest rate(%): ";
+	cin >> theAccount.interestRate;
+	cout << "Enter the number of months until maturity: ";
+	cin >> theAccount.term;
+}
