@@ -18,6 +18,5 @@ int main() {
 		sum = sum + number;
 	}
 	cout << sum << " is the sum of the first "<< --count << " numbers.";
-
 	return 0;
 }
