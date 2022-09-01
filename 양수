@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int number, sum = 0,  count = 0;
+	cout << "Enter 5 positive numbers: " << endl;
+
+	while (++count <= 5) {
+		cin >> number;
+		if (number <= 0) {
+			cout << "ERROR" << endl;
+			cout << count << "th number must be changed. Input ends with the " 
+				<< count << "th number." << endl;
+			cout << count << "th number was not added in." << endl;
+			break;
+		}
+
+		sum = sum + number;
+	}
+	cout << sum << " is the sum of the first "<< --count << " numbers.";
+
+	return 0;
+}
